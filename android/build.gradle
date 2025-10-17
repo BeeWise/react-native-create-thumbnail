@@ -151,18 +151,3 @@ afterEvaluate { project ->
         }
     }
 }
-
-def myAttribute = Attribute.of("com.android.build.api.attributes.BuildTypeAttr", String)
-
-dependencies.attributesSchema {
-    // registers this attribute to the attributes schema
-    attribute(myAttribute)
-}
-
-configurations {
-    implementation {
-        attributes {
-            attribute(myAttribute, "release")
-        }
-    }
-}
